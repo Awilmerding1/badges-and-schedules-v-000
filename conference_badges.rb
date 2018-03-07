@@ -22,13 +22,12 @@ end
 
 def printer(attendees)
   attendees = speakers_array
-  batch_badge_creator(speakers_array)
-  badge_array.each do |badges|
+  batch_badge_creator(speakers_array).each do |badges|
     puts "#{badges}"
   end
-  assign_rooms(attendees)
-  assign_array.each do |assigns|
-    puts "#{assigns}"
+  attendees = speakers_array
+  assign_rooms(speakers_array).each do |assign|
+    puts "#{assign}"
   end
 end
 
