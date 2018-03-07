@@ -21,11 +21,11 @@ end
  
 
 def printer(attendees)
-  attendees = speakers_array
+  speakers_array = attendees
   batch_badge_creator(speakers_array).each do |badges|
     puts "#{badges}"
   end
-  attendees = speakers_array
+  speakers_array = attendees
   assign_rooms(speakers_array).each do |assign|
     puts "#{assign}"
   end
